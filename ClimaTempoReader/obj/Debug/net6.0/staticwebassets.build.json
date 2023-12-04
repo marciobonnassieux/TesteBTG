@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "bHjZYyE8+5wr/Dk+8lno7XSgbSSUF4qZikqaoZkVEPM=",
+  "Source": "ClimaTempoReader",
+  "BasePath": "_content/ClimaTempoReader",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
