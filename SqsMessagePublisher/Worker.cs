@@ -154,14 +154,9 @@ public class Worker : BackgroundService
 
         //AmazonSQSClient client = new AmazonSQSClient(new EnvironmentVariablesAWSCredentials());
 
-        var awsCredentials = new Amazon.Runtime.BasicAWSCredentials("", ""); //new Amazon.Runtime.BasicAWSCredentials("
-                                                                             //AKIAR5O 
-                                                                             //GUQH 
-                                                                             //5TEWM3TU3 ",
-                                                                             //"N1tM4CsiI
-                                                                             //oohglJhJ+g3
-                                                                             //UIYTot3H58Mh
-                                                                             //FLUNDgws");
+        var awsCredentials = new Amazon.Runtime.BasicAWSCredentials("", "");
+        //AWS KEY
+
         AmazonSQSClient client = new AmazonSQSClient(awsCredentials, Amazon.RegionEndpoint.USEast2);
         return client;
     }
