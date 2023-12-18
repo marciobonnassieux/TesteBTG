@@ -1,4 +1,4 @@
-namespace ClimaTempoReader
+namespace CurrencyAnalyzer
 {
     public class WeatherForecast
     {

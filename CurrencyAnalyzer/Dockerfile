@@ -6,16 +6,16 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["ClimaTempoReader/ClimaTempoReader.csproj", "ClimaTempoReader/"]
-RUN dotnet restore "ClimaTempoReader/ClimaTempoReader.csproj"
+COPY ["CurrencyAnalyzer/CurrencyAnalyzer.csproj", "CurrencyAnalyzer/"]
+RUN dotnet restore "CurrencyAnalyzer/CurrencyAnalyzer.csproj"
 COPY . .
-WORKDIR "/src/ClimaTempoReader"
-RUN dotnet build "ClimaTempoReader.csproj" -c Release -o /app/build
+WORKDIR "/src/CurrencyAnalyzer"
+RUN dotnet build "CurrencyAnalyzer.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "ClimaTempoReader.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "CurrencyAnalyzer.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ClimaTempoReader.dll"]
+ENTRYPOINT ["dotnet", "CurrencyAnalyzer.dll"]

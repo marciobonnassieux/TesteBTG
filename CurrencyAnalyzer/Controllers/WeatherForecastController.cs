@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace ClimaTempoReader.Controllers
+namespace CurrencyAnalyzer.Controllers
 {
     [ApiController]
     [Route("[controller]")]
